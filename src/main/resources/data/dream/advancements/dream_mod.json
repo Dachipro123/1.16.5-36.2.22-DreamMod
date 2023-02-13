@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "dream:dream_ingot"
+    },
+    "title": "Dream Mod",
+    "description": "Get a hold of a Dream Ingot! ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "dream:textures/block/dream_block.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "dream:dream_ingot"
+          }
+        ]
+      }
+    }
+  }
+}

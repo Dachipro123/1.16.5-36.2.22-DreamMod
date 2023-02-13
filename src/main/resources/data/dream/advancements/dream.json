@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "block": "dream:dream_block"
+    },
+    "title": "Dreamy Dream",
+    "description": "Get a hold of a Dream Block! ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "dream:dream_mod",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "blocks": [
+          {
+            "block": "dream:dream_block"
+          }
+        ]
+      }
+    }
+  }
+}

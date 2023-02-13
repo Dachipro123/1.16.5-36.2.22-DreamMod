@@ -1,0 +1,34 @@
+{
+  "item.dream.dream_ingot": "Dream Ingot",
+  "item.dream.dream_lighter": "Dream Lighter",
+  "item.dream.among_us_drip_music_disc": "Among us drip music disc",
+  "item.dream.among_us_drip_music_disc.desc": "Among us drip music disc - remix by me Dachi",
+  "item.dream.dream_sword": "Dream Sword",
+  "item.dream.dream_axe": "Dream Axe",
+  "item.dream.dream_pickaxe": "Dream Pickaxe",
+  "item.dream.dream_hoe": "Dream Hoe",
+  "item.dream.dream_shovel": "Dream Shovel",
+  "item.dream.oil_bucket": "Oil Bucket",
+  "item.dream.penguin_spawn_egg": "Penguin Spawn Egg",
+
+  "entity.minecraft.villager.dream.dream_maker": "Dream Maker",
+
+  "itemGroup.DreamModTab": "Dream Mod Menu",
+
+  "block.dream.dream_block": "Dream Block",
+  "block.dream.dream_ore": "Dream Ore",
+  "block.dream.nightmare_block": "Nightmare Block",
+  "block.dream.dream_blaster": "Dream Blaster",
+  "block.dream.dream_bricks": "Dream Bricks",
+
+  "screen.dream.dream_blaster": "Dream Blaster",
+
+  "tooltips.dream.dream_block": "\u00A7bIs This a Dream or a Nightmare",
+  "tooltips.dream.dream_sword_1": "\u00A7bGives The Attacker The Health Boost Effect",
+  "tooltips.dream.nightmare_block": "\u00A70Is This a Nightmare Shh..",
+
+  "fluid.dream.oil": "Oil",
+
+  "key.dream.dream_key": "Dream KeyBind",
+  "key.category.dream": "Dream"
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "dream:block/dream_blaster" },
+    "facing=east": { "model": "dream:block/dream_blaster", "y": 90 },
+    "facing=south": { "model": "dream:block/dream_blaster", "y": 180 },
+    "facing=west": { "model": "dream:block/dream_blaster", "y": 270 }
+  }
+}
