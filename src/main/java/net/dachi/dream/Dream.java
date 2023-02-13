@@ -2,6 +2,7 @@ package net.dachi.dream;
 
 import net.dachi.dream.block.ModBlocks;
 import net.dachi.dream.container.ModContainers;
+import net.dachi.dream.effects.ModEffects;
 import net.dachi.dream.entity.ModEntityTypes;
 import net.dachi.dream.entity.custom.PenguinEntity;
 import net.dachi.dream.entity.render.PenguinRenderer;
@@ -73,6 +74,7 @@ public class Dream
         ModTileEntities.register(eventBus);
         ModContainers.register(eventBus);
         ModPaintings.register(eventBus);
+        ModEffects.register(eventBus);
         //ModParticles.register(eventBus);
 
         ModStructures.register(eventBus);

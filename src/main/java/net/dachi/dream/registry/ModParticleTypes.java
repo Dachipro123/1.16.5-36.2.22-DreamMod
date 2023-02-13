@@ -18,15 +18,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(modid = Dream.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModParticleTypes {
-    //public static final DeferredRegister<ParticleType<?>> PARTICLES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, Dream.MOD_ID);
-//
-    //public static final RegistryObject<BasicParticleType> DREAM_AMBIENT_PARTICLES = PARTICLES.register("dream_ambient_particles", () -> new BasicParticleType(false));
-//
-    //@SubscribeEvent
-    //@OnlyIn(Dist.CLIENT)
-    //public static void registerParticleFactories(ParticleFactoryRegisterEvent event) {
-    //    ParticleManager particleManager = Minecraft.getInstance().particles;
-//
-    //    //particleManager.registerFactory(DREAM_AMBIENT_PARTICLES.get(), p_create_1_ -> DreamParticle);
-    //}
+    public static final DeferredRegister<ParticleType<?>> PARTICLES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, Dream.MOD_ID);
+
+    public static final RegistryObject<BasicParticleType> DREAM_AMBIENT_PARTICLES = PARTICLES.register("dream_ambient_particles", () -> new BasicParticleType(false));
+
+    @SubscribeEvent
+    @OnlyIn(Dist.CLIENT)
+    public static void registerParticleFactories(ParticleFactoryRegisterEvent event) {
+        ParticleManager particleManager = Minecraft.getInstance().particles;
+
+    //particleManager.registerFactory(DREAM_AMBIENT_PARTICLES.get(), );
+    }
 }
