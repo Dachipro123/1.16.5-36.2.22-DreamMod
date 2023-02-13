@@ -13,7 +13,7 @@ public class ModPotions {
     public static final DeferredRegister<Potion> POTIONS
             = DeferredRegister.create(ForgeRegistries.POTION_TYPES, Dream.MOD_ID);
 
-    public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion",
+    public static final RegistryObject<Potion> DREAM_POTION = POTIONS.register("dream_potion",
             () -> new Potion(new EffectInstance(ModEffects.DREAM.get(), 200, 0)));
 
     public static void register(IEventBus eventBus) {

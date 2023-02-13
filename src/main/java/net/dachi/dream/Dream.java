@@ -10,6 +10,7 @@ import net.dachi.dream.fluid.ModFluids;
 import net.dachi.dream.item.ModItems;
 import net.dachi.dream.networking.ModMessages;
 import net.dachi.dream.paintings.ModPaintings;
+import net.dachi.dream.potion.ModPotions;
 import net.dachi.dream.screen.DreamBlasterScreen;
 import net.dachi.dream.tileentity.ModTileEntities;
 import net.dachi.dream.util.ModSoundEvents;
@@ -75,6 +76,7 @@ public class Dream
         ModContainers.register(eventBus);
         ModPaintings.register(eventBus);
         ModEffects.register(eventBus);
+        ModPotions.register(eventBus);
         //ModParticles.register(eventBus);
 
         ModStructures.register(eventBus);

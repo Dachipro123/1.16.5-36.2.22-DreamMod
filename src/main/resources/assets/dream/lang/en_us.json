@@ -31,6 +31,10 @@
 
   "effect.dream.dream": "Dream Effect",
 
+  "item.minecraft.potion.effect.dream_potion": "Dream Potion",
+  "item.minecraft.splash_potion.effect.dream_potion": "Splash Potion of Dream",
+  "item.minecraft.lingering_potion.effect.dream_potion": "Lingering Potion of Dream",
+
   "key.dream.dream_key": "Dream KeyBind",
   "key.category.dream": "Dream"
 }
