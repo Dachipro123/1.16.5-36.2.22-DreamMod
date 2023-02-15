@@ -10,6 +10,7 @@
   "item.dream.dream_shovel": "Dream Shovel",
   "item.dream.oil_bucket": "Oil Bucket",
   "item.dream.penguin_spawn_egg": "Penguin Spawn Egg",
+  "item.dream.nightmare_blaze_spawn_egg": "Nightmare Blaze Spawn Egg",
 
   "entity.minecraft.villager.dream.dream_maker": "Dream Maker",
 
@@ -20,6 +21,11 @@
   "block.dream.nightmare_block": "Nightmare Block",
   "block.dream.dream_blaster": "Dream Blaster",
   "block.dream.dream_bricks": "Dream Bricks",
+  "block.dream.dream_log": "Dream Log",
+  "block.dream.dream_planks": "Dream Planks",
+  "block.dream.dream_wood": "Dream Wood",
+  "block.dream.stripped_dream_log": "Stripped Dream Log",
+  "block.dream.stripped_dream_wood": "Stripped Dream Wood",
 
   "screen.dream.dream_blaster": "Dream Blaster",
 
@@ -30,6 +36,8 @@
   "fluid.dream.oil": "Oil",
 
   "effect.dream.dream": "Dream Effect",
+
+  "entity.dream.nightmare_blaze": "Nightmare Blaze",
 
   "item.minecraft.potion.effect.dream_potion": "Dream Potion",
   "item.minecraft.splash_potion.effect.dream_potion": "Splash Potion of Dream",

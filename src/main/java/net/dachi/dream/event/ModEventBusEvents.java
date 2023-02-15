@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.MerchantOffer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.common.util.Constants;
@@ -69,18 +70,16 @@ public class ModEventBusEvents {
     //    }
     //}
 //
-    //@SubscribeEvent
-    //public static void onPlayerCloned(PlayerEvent.Clone event) {
-    //    if(event.isWasDeath()) {
-    //        event.getOriginal().getCapability(PlayerSleepinessProvider.PLAYER_SLEEPINESS).ifPresent(oldStore -> {
-    //            event.getOriginal().getCapability(PlayerSleepinessProvider.PLAYER_SLEEPINESS).ifPresent(newStore -> {
-    //                newStore.copyFrom(oldStore);
-    //            });
-    //        });
-    //    }
-    //}
-   // public void onCommonSetup(FMLCommonSetupEvent event) {
-   //     CapabilityManager.INSTANCE.register(PlayerSleepiness.class, SimpleCapabilityStorage.create(() -> PlayerSleepinessProvider.PLAYER_SLEEPINESS, Constants.NBT.TAG_COMPOUND, PlayerSleepinessProvider::new);
-   // }
+    @SubscribeEvent
+    public static void onPlayerCloned(PlayerEvent.Clone event) {
+        if(event.isWasDeath()) {
+            event.getOriginal().getCapability(PlayerSleepinessProvider.PLAYER_SLEEPINESS).ifPresent(oldStore -> {
+                event.getOriginal().getCapability(PlayerSleepinessProvider.PLAYER_SLEEPINESS).ifPresent(newStore -> {
+                    newStore.copyFrom(oldStore);
+                });
+            });
+        }
+    }
+
 
 }

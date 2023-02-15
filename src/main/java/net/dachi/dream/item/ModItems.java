@@ -80,6 +80,9 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.PENGUIN,0x948e8d, 0x3b3635,
                     new Item.Properties().group(ModItemGroup.DREAM_MOD_TAB)));
 
+    public static final RegistryObject<ForgeSpawnEggItem> NIGHTMARE_BLAZE_SPAWN_EGG = ITEMS.register("nightmare_blaze_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.NIGHTMARE_BLAZE,000000, 808080,
+                    new Item.Properties().group(ModItemGroup.DREAM_MOD_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

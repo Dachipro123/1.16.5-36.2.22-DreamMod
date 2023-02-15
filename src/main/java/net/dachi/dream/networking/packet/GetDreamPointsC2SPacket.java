@@ -55,7 +55,7 @@ public class GetDreamPointsC2SPacket {
                     //player.addItemStackToInventory(new ItemStack(Items.FLINT_AND_STEEL));
                     World world = player.getEntityWorld();
                     world.setBlockState(player.getPosition().down(), ModBlocks.DREAM_BLOCK.get().getDefaultState());
-                    Minecraft.getInstance().player.sendMessage((ITextComponent)new StringTextComponent("You got Dream points click 9 more times to pass "),null);
+                    Minecraft.getInstance().player.sendMessage((ITextComponent)new StringTextComponent("You got Dream points click" + "more times to pass "),null);
                 }
             });
             context.setPacketHandled(true);

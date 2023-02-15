@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "dream:block/stripped_dream_log",
+    "side": "dream:block/stripped_dream_log"
+  }
+}

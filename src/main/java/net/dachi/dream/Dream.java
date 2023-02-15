@@ -1,10 +1,14 @@
 package net.dachi.dream;
 
+import com.google.common.collect.ImmutableMap;
 import net.dachi.dream.block.ModBlocks;
 import net.dachi.dream.container.ModContainers;
+import net.dachi.dream.dreamy.PlayerSleepiness;
 import net.dachi.dream.effects.ModEffects;
 import net.dachi.dream.entity.ModEntityTypes;
+import net.dachi.dream.entity.custom.NightmareBlazeEntity;
 import net.dachi.dream.entity.custom.PenguinEntity;
+import net.dachi.dream.entity.render.NightmareBlazeRenderer;
 import net.dachi.dream.entity.render.PenguinRenderer;
 import net.dachi.dream.fluid.ModFluids;
 import net.dachi.dream.item.ModItems;
@@ -25,11 +29,14 @@ import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
+import net.minecraft.item.AxeItem;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -111,7 +118,13 @@ public class Dream
 
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(ModEntityTypes.PENGUIN.get(), PenguinEntity.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(ModEntityTypes.NIGHTMARE_BLAZE.get(), NightmareBlazeEntity.registerAttributes().create());
             ModVillagers.registerPOIs();
+        });
+        event.enqueueWork(() ->{
+            AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
+                    .put(ModBlocks.DREAM_LOG.get(), ModBlocks.STRIPPED_DREAM_LOG.get())
+                    .put(ModBlocks.DREAM_WOOD.get(), ModBlocks.STRIPPED_DREAM_WOOD.get()).build();
         });
 
         ModStructures.setupStructures();
@@ -135,6 +148,7 @@ public class Dream
         });
         ModMessages.register();
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PENGUIN.get(), PenguinRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.NIGHTMARE_BLAZE.get(), NightmareBlazeRenderer::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

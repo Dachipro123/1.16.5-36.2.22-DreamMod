@@ -8,8 +8,10 @@ import net.dachi.dream.block.custom.DreamPortalBlock;
 import net.dachi.dream.block.custom.NightmareBlock;
 import net.dachi.dream.creativetabs.ModItemGroup;
 import net.dachi.dream.item.ModItems;
-import net.dachi.dream.world.dimension.portal.ModTeleporter;
-import net.minecraft.block.*;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -61,6 +63,23 @@ public class ModBlocks {
             () -> new DreamPortalBlock(AbstractBlock.Properties.from(Blocks.NETHER_PORTAL)
                     .setLightLevel((state) -> 10).noDrops().notSolid().hardnessAndResistance(-6f)));
 
+    public static final RegistryObject<Block> DREAM_LOG = registerBlock("dream_log",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> DREAM_WOOD = registerBlock("dream_wood",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_DREAM_LOG = registerBlock("stripped_dream_log",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final RegistryObject<Block> STRIPPED_DREAM_WOOD = registerBlock("stripped_dream_wood",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> DREAM_PLANKS = registerBlock("dream_planks",
+            () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
+
+
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -72,6 +91,7 @@ public class ModBlocks {
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().group(ModItemGroup.DREAM_MOD_TAB)));
+
     }
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
