@@ -98,7 +98,7 @@ public class NightmareBlazeEntity extends MonsterEntity implements IAnimatable {
     }
 
     protected float getSoundVolume() {
-        return 0.2F;
+        return 0.1F;
     }
 
 }

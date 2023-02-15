@@ -71,7 +71,7 @@ public class DreamBlasterTile extends TileEntity {
             @Nonnull
             @Override
             public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate) {
-                if(isItemValid(slot, stack)) {
+                if(!isItemValid(slot, stack)) {
                     return stack;
                 }
 

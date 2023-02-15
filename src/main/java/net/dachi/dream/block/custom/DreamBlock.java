@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
@@ -33,7 +34,12 @@ public class DreamBlock extends Block {
     }
 
     public static void giveBlindness(World worldIn, BlockPos pos, LivingEntity entityIn) {
-        entityIn.addPotionEffect(new EffectInstance(Effects.BLINDNESS,20));
+        if (entityIn instanceof PlayerEntity){
+            entityIn.addPotionEffect(new EffectInstance(Effects.BLINDNESS,20));
+        } else {
+            entityIn.sendMessage(new StringTextComponent(""),entityIn.getUniqueID());
+        }
+
     }
 
 }
